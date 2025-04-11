@@ -1,8 +1,11 @@
 import db from '../config/connection.js';
 import { Question } from '../models/index.js'
 import cleanDB from './cleanDb.js';
+import { readFileSync } from 'fs';
 
-import questionData from './pythonQuestions.json' assert{ type: 'json'};
+const questionData = JSON.parse(
+  readFileSync(new URL('./pythonQuestions.json', import.meta.url), 'utf-8')
+);
 
 try {
   await db();
