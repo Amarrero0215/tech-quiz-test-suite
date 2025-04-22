@@ -89,7 +89,7 @@ node --loader ts-node/esm src/seeds/seed.ts
 # In one terminal
 cd server
 npm run build
-npm run dev
+npm start
 
 # In another terminal
 cd client
