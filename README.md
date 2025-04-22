@@ -33,7 +33,7 @@ The video demonstrates:
 ## 📂 File Structure Overview
 
 ```
-.
+Develop/
 ├── client/                 # React frontend
 ├── server/                 # Express backend + MongoDB connection
 ├── cypress/                # Cypress testing setup
@@ -44,7 +44,7 @@ The video demonstrates:
 ├── cypress.config.ts       # Cypress config (component + e2e)
 ├── .env                    # MongoDB URI (required to run backend)
 ├── package.json            # Scripts + dependencies
-└── README.md               # You are here
+README.md                   # You are here
 ```
 
 ---
@@ -83,15 +83,17 @@ cd server
 node --loader ts-node/esm src/seeds/seed.ts
 ```
 
-### 5. Run the backend and frontend
+### 5. Build & Run the backend and frontend
 
 ```bash
 # In one terminal
 cd server
+npm run build
 npm run dev
 
 # In another terminal
 cd client
+npm run build
 npm run dev
 ```
 
